@@ -6,7 +6,10 @@
 
 [build]
 builder = "NIXPACKS"
-buildCommand = "npm ci && npm run build"
+# `npm install` (not `npm ci`) — Nixpacks mounts node_modules/.cache as a cache
+# volume, and `npm ci` fails with EBUSY trying to wipe a locked node_modules.
+# `npm install` syncs to the lockfile in place without touching the cache mount.
+buildCommand = "npm install --prefer-offline --no-audit --no-fund && npm run build"
 
 [deploy]
 startCommand = "npm run start"
