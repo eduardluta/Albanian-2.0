@@ -2,10 +2,10 @@ import type { Messages } from "./en";
 
 const sq: Messages = {
   meta: {
-    title: "Digital Kosovo 2.0 — Jemi 16 milionë. Koha që platformat të veprojnë sikurse.",
+    title: "Digital Albanian 2.0 — Jemi 16 milionë. Koha që platformat të veprojnë sikurse.",
     description:
       "Një lëvizje që e vendos Kosovën në çdo hartë dhe shqipen në çdo meny. Një kompani. Një peticion. Një nënshkrim në kohë.",
-    ogAlt: "Digital Kosovo 2.0 — 16 milionë shqiptarë. Një platformë në kohë.",
+    ogAlt: "Digital Albanian 2.0 — 16 milionë shqiptarë. Një platformë në kohë.",
   },
   nav: {
     petitions: "Peticionet",
@@ -58,7 +58,7 @@ const sq: Messages = {
     body: [
       "Jetojmë në 178 vende. Flasim shqip. Jemi diaspora më e madhe për kokë banori në Evropë. Ne shpikëm shqiponjën moderne dykrenare. Jemi popullsia më e re në Ballkan. {em:Dhe platformat që përdorim çdo ditë vazhdojnë të na trajtojnë sikur nuk ekzistojmë.}",
       "Netflix ka 33 gjuhë titrash. Shqipja nuk është një prej tyre. Spotify shtoi boshnjakishten. Anashkaloi shqipen. PayPal është në Mozambik. PayPal nuk është në Kosovë. Apple Pay nuk funksionon në Kosovë. Prishtina është e vetmja kryeqytet i Ballkanit Perëndimor pa Uber.",
-      "Këto nuk janë opinione. Janë fakte. Secila dokumentohet në faqen e vetë platformës. Digital Kosovo 2.0 nuk është një ankesë — është një listë. Një listë e platformave që kanë një zgjedhje për të bërë.",
+      "Këto nuk janë opinione. Janë fakte. Secila dokumentohet në faqen e vetë platformës. Digital Albanian 2.0 nuk është një ankesë — është një listë. Një listë e platformave që kanë një zgjedhje për të bërë.",
     ],
     stats: [
       { v: "16M", l: "Shqiptarë në botë" },
@@ -303,7 +303,7 @@ const sq: Messages = {
     },
     cities:
       "Bërë në {em:Prishtinë, Tiranë, Shkup, Cyrih, Berlin, Nju Jork}. Kudo ku jetojnë shqiptarët.",
-    copyright: "© 2026 Digital Kosovo 2.0 · Një iniciativë e dua.com",
+    copyright: "© 2026 Digital Albanian 2.0 · Një iniciativë e dua.com",
   },
 };
 

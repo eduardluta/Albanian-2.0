@@ -16,10 +16,10 @@ export default function PetitionNav({
         <div className="flex items-center gap-3 min-w-0">
           <Link
             href={`/${locale}/`}
-            aria-label="Digital Kosovo 2.0"
-            className="w-[30px] h-[30px] inline-flex items-center justify-center bg-red rounded-[4px] text-paper font-serif italic font-bold text-[16px] tracking-[-0.04em] leading-none shrink-0"
+            aria-label="Digital Albanian 2.0"
+            className="w-[30px] h-[30px] inline-flex items-center justify-center bg-red rounded-[6px] text-paper font-display leading-none text-[20px] tracking-[0.05em] pt-[2px] shrink-0"
           >
-            dk
+            DA
           </Link>
           <div className="text-[12px] text-grey-5 font-semibold truncate hidden sm:block">
             <Link href={`/${locale}/#petitions`} className="hover:text-paper transition-colors">

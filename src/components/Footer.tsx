@@ -10,12 +10,12 @@ export default function Footer({ m, locale }: { m: Messages; locale: Locale }) {
       <div className="wrap">
         <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 mb-14">
           <div>
-            <Link href={`/${locale}/`} className="flex items-center gap-3" aria-label="Digital Kosovo 2.0">
-              <span className="w-8 h-8 flex items-center justify-center bg-red rounded-[4px] text-paper font-serif italic font-bold text-[17px] tracking-[-0.04em] leading-none">
-                dk
+            <Link href={`/${locale}/`} className="flex items-center gap-3" aria-label="Digital Albanian 2.0">
+              <span className="w-8 h-8 flex items-center justify-center bg-red rounded-[6px] text-paper font-display leading-none text-[22px] tracking-[0.05em] pt-[2px]">
+                DA
               </span>
               <span className="font-extrabold text-[14px] tracking-[0.02em]">
-                Digital Kosovo
+                Digital Albanian
                 <span className="text-grey-5 font-medium ml-1.5">2.0</span>
               </span>
             </Link>

@@ -1,6 +1,6 @@
 /**
  * Static data for the Netflix petition page.
- * Source: design handoff "Digital Kosovo 2.0-handoff (1)" / variation-b.jsx
+ * Source: design handoff "Digital Albanian 2.0-handoff (1)" / variation-b.jsx
  */
 
 export const NETFLIX_CHANGE_ORG_URL =

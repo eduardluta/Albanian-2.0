@@ -13,7 +13,7 @@ import Faq from "@/components/petition/Faq";
 import PetitionCta from "@/components/petition/PetitionCta";
 
 const PETITION_TITLE = "Add Albanian to Netflix";
-const META_TITLE = `${PETITION_TITLE} · Digital Kosovo 2.0`;
+const META_TITLE = `${PETITION_TITLE} · Digital Albanian 2.0`;
 const META_DESC =
   "Netflix supports 33 languages. Albanian — spoken by 16 million people — is not one of them. Sign the open letter to add Albanian subtitles, dubs and UI by Q4 2026.";
 

@@ -10,13 +10,13 @@ export default function Nav({ m, locale }: { m: Messages; locale: Locale }) {
         <Link
           href={`/${locale}/`}
           className="flex items-center gap-3 shrink-0"
-          aria-label="Digital Kosovo 2.0"
+          aria-label="Digital Albanian 2.0"
         >
-          <span className="w-8 h-8 flex items-center justify-center bg-red rounded-[4px] text-paper font-serif italic font-bold text-[17px] tracking-[-0.04em] leading-none">
-            dk
+          <span className="w-8 h-8 flex items-center justify-center bg-red rounded-[6px] text-paper font-display leading-none text-[22px] tracking-[0.05em] pt-[2px]">
+            DA
           </span>
           <span className="hidden min-[420px]:inline font-extrabold text-[14px] tracking-[0.02em]">
-            Digital Kosovo
+            Digital Albanian
             <span className="text-grey-5 font-medium ml-1.5">2.0</span>
           </span>
         </Link>

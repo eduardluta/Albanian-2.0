@@ -1,9 +1,9 @@
 const en = {
   meta: {
-    title: "Digital Kosovo 2.0 — We are 16 million. Time the platforms acted like it.",
+    title: "Digital Albanian 2.0 — We are 16 million. Time the platforms acted like it.",
     description:
       "A movement to put Kosovo on every map and Albanian in every menu. One company. One petition. One signature at a time.",
-    ogAlt: "Digital Kosovo 2.0 — 16 million Albanians. One platform at a time.",
+    ogAlt: "Digital Albanian 2.0 — 16 million Albanians. One platform at a time.",
   },
   nav: {
     petitions: "Petitions",
@@ -56,7 +56,7 @@ const en = {
     body: [
       "We live in 178 countries. We speak Albanian. We are the largest diaspora per capita in Europe. We invented the modern double-headed eagle. We are the youngest population in the Balkans. {em:And the platforms we use every day still treat us like we don't exist.}",
       "Netflix has 33 subtitle languages. Albanian is not one of them. Spotify added Bosnian. They skipped Albanian. PayPal is in Mozambique. PayPal is not in Kosovo. Apple Pay does not work in Kosovo. Pristina is the only Western Balkans capital without Uber.",
-      "These are not opinions. They are facts. Each one is documented on the platform's own website. Digital Kosovo 2.0 is not a complaint — it is a list. A list of platforms that have a choice to make.",
+      "These are not opinions. They are facts. Each one is documented on the platform's own website. Digital Albanian 2.0 is not a complaint — it is a list. A list of platforms that have a choice to make.",
     ],
     stats: [
       { v: "16M", l: "Albanians worldwide" },
@@ -304,7 +304,7 @@ const en = {
     },
     cities:
       "Made in {em:Pristina, Tirana, Skopje, Zürich, Berlin, New York}. Wherever Albanians live.",
-    copyright: "© 2026 Digital Kosovo 2.0 · A dua.com initiative",
+    copyright: "© 2026 Digital Albanian 2.0 · A dua.com initiative",
   },
 };
 

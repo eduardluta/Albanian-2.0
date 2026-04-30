@@ -2,10 +2,10 @@ import type { Messages } from "./en";
 
 const de: Messages = {
   meta: {
-    title: "Digital Kosovo 2.0 — Wir sind 16 Millionen. Zeit, dass die Plattformen es merken.",
+    title: "Digital Albanian 2.0 — Wir sind 16 Millionen. Zeit, dass die Plattformen es merken.",
     description:
       "Eine Bewegung, die das Kosovo auf jede Karte und Albanisch in jedes Menü bringt. Ein Unternehmen. Eine Petition. Eine Unterschrift nach der anderen.",
-    ogAlt: "Digital Kosovo 2.0 — 16 Millionen Albaner. Eine Plattform nach der anderen.",
+    ogAlt: "Digital Albanian 2.0 — 16 Millionen Albaner. Eine Plattform nach der anderen.",
   },
   nav: {
     petitions: "Petitionen",
@@ -58,7 +58,7 @@ const de: Messages = {
     body: [
       "Wir leben in 178 Ländern. Wir sprechen Albanisch. Wir sind die größte Diaspora pro Kopf in Europa. Wir haben den modernen Doppeladler erfunden. Wir sind die jüngste Bevölkerung des Balkans. {em:Und die Plattformen, die wir täglich nutzen, behandeln uns weiterhin so, als gäbe es uns nicht.}",
       "Netflix hat 33 Untertitelsprachen. Albanisch ist keine davon. Spotify hat Bosnisch hinzugefügt. Albanisch wurde übersprungen. PayPal ist in Mosambik. PayPal ist nicht im Kosovo. Apple Pay funktioniert nicht im Kosovo. Pristina ist die einzige Hauptstadt des Westbalkans ohne Uber.",
-      "Das sind keine Meinungen. Das sind Fakten. Jeder einzelne ist auf der Website der Plattform selbst dokumentiert. Digital Kosovo 2.0 ist keine Beschwerde — es ist eine Liste. Eine Liste von Plattformen, die eine Wahl zu treffen haben.",
+      "Das sind keine Meinungen. Das sind Fakten. Jeder einzelne ist auf der Website der Plattform selbst dokumentiert. Digital Albanian 2.0 ist keine Beschwerde — es ist eine Liste. Eine Liste von Plattformen, die eine Wahl zu treffen haben.",
     ],
     stats: [
       { v: "16M", l: "Albaner weltweit" },
@@ -303,7 +303,7 @@ const de: Messages = {
     },
     cities:
       "Gemacht in {em:Pristina, Tirana, Skopje, Zürich, Berlin, New York}. Wo immer Albaner leben.",
-    copyright: "© 2026 Digital Kosovo 2.0 · Eine Initiative von dua.com",
+    copyright: "© 2026 Digital Albanian 2.0 · Eine Initiative von dua.com",
   },
 };
 

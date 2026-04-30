@@ -1,4 +1,4 @@
-# Digital Kosovo 2.0
+# Digital Albanian 2.0
 
 A movement to put Kosovo on every map and Albanian in every menu. One company. One petition. One signature at a time.
 
@@ -140,5 +140,5 @@ These are all isolated additions; the structure supports them without refactor.
 
 ## Reference
 
-- Design source: `digital-kosovo-2-0/project/Digital Kosovo 2.0.html` (Claude Design handoff).
+- Design source: `digital-kosovo-2-0/project/Digital Albanian 2.0.html` (Claude Design handoff).
 - Brief: `digital-kosovo-2-0/project/uploads/Digital_Kosovo_2.0_Briefing.docx`.
