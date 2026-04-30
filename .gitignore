@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+dist/
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+.vercel
+next-env.d.ts
+.turbo/
+.idea/
+.vscode/
+tsconfig.tsbuildinfo
+
+# Internal design handoff bundle — keeps strategy / press target list out of public repo
+/digital-kosovo-2-0/
