@@ -1,0 +1,16 @@
+# Railway deploy config
+#
+# This site is a Next.js static export (`output: "export"`), so we don't run
+# a Next.js server in production. We build the static `out/` folder and serve
+# it with the `serve` package on $PORT.
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm ci && npm run build"
+
+[deploy]
+startCommand = "npm run start"
+healthcheckPath = "/en/"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
