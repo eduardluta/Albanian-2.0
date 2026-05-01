@@ -4,7 +4,8 @@ import { siteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const PETITION_PAGES = ["p/netflix"]; // add new petition slugs here as they ship
+/** Every petition slug that has a /p/<slug>/ detail page (and a /letter sub-page). */
+const PETITION_SLUGS = ["netflix", "spotify", "paypal", "apple", "elevenlabs", "uber"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -19,15 +20,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages: localeAlts() },
   }));
 
-  const petitionPages: MetadataRoute.Sitemap = PETITION_PAGES.flatMap((path) =>
-    locales.map((locale) => ({
-      url: `${siteUrl}/${locale}/${path}/`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-      alternates: { languages: localeAlts(path) },
-    })),
-  );
+  const petitionPages: MetadataRoute.Sitemap = PETITION_SLUGS.flatMap((slug) => {
+    const detailPath = `p/${slug}`;
+    const letterPath = `p/${slug}/letter`;
+    return locales.flatMap((locale) => [
+      {
+        url: `${siteUrl}/${locale}/${detailPath}/`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+        alternates: { languages: localeAlts(detailPath) },
+      },
+      {
+        url: `${siteUrl}/${locale}/${letterPath}/`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+        alternates: { languages: localeAlts(letterPath) },
+      },
+    ]);
+  });
 
   return [...homePages, ...petitionPages];
 }
