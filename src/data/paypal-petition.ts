@@ -116,13 +116,50 @@ const SIGNERS = [
   { name: "Adrian Spahija", city: "Milan", time: "32 min" },
 ];
 
+export const PAYPAL_LETTER = {
+  sentDate: "2026-04-18",
+  sentDateDisplay: "April 18, 2026",
+  to: {
+    name: "Alex Chriss",
+    role: "President & CEO, PayPal Holdings Inc.",
+    company: "PayPal Holdings Inc.",
+    address: ["2211 N First Street", "San Jose, CA 95131", "United States"],
+  },
+  subject: "Add Kosovo to the country list — personal & business — by Q1 2027",
+  salutation: "Dear Mr. Chriss,",
+  body: [
+    "We are writing as 36,902 people in and from Kosovo who cannot use PayPal. Across the world, PayPal serves 200+ countries and 435 million accounts. Kosovo is the only country in continental Europe that is not on the list.",
+    "Our neighbours are all served — Montenegro (population 0.62M), North Macedonia (2.1M), Albania (2.8M), Bosnia & Herzegovina (3.3M), Serbia (6.6M): send, receive, and business accounts all available. Kosovo (1.8M, the youngest population in the Balkans, 80% smartphone penetration): zero.",
+    "The technical, legal, and AML/KYC work has been completed for every neighbour. Kosovo is on FATF's standard list; the Central Bank of Kosovo confirmed in January 2025 that the missing UN country code — not regulatory readiness — was the technical blocker. The country code is now standard at SWIFT, ISO 3166-2:KO is in active use, and the +383 dialing code has full international acceptance.",
+  ],
+  asks: [
+    "Kosovo on the PayPal country list, with full send and receive.",
+    "Kosovo as a supported country for PayPal Business.",
+    "A public timeline communicating the rollout plan.",
+  ],
+  closing: [
+    "PayPal previously responded in 2018 and 2021 — both citing \"ongoing review.\" We are asking for a public timeline this time.",
+    "Signatures are being collected at change.org/p/paypal-bring-paypal-to-kosovo and will be delivered at 100,000.",
+  ],
+  replyByDisplay: "We would welcome a reply by June 15, 2026.",
+  signOff: "Sincerely,",
+  signedBy: {
+    name: "Driton Bajraktari",
+    role: "Founder & CEO, dua.com",
+    behalfOf: "On behalf of Digital Albanian 2.0",
+  },
+  replies: [],
+};
+
 export const PAYPAL_PETITION: Petition = {
   target: "PayPal",
   num: "03",
+  slug: "paypal",
   changeOrgUrl: PAYPAL_CHANGE_ORG_URL,
   signatures: PAYPAL_SIGNATURES,
   target_count: PAYPAL_TARGET,
   accent: "#1F6CFF",
   signers: SIGNERS,
   faq: PAYPAL_FAQ,
+  letter: PAYPAL_LETTER,
 };

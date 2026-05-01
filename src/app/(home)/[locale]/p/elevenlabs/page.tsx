@@ -65,7 +65,7 @@ export default async function ElevenLabsPetitionPage({
   return (
     <main>
       <ElevenLabsHero />
-      <ElevenLabsAsk />
+      <ElevenLabsAsk locale={locale} />
       <SignBlock
         petition={ELEVENLABS_PETITION}
         num="03"

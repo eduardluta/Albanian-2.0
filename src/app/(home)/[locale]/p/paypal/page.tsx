@@ -65,7 +65,7 @@ export default async function PayPalPetitionPage({
   return (
     <main>
       <PayPalHero />
-      <PayPalAsk />
+      <PayPalAsk locale={locale} />
       <PayPalCosts />
       <PayPalReceipts />
       <SignBlock

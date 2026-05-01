@@ -1,4 +1,4 @@
-export default function ElevenLabsAsk() {
+export default function ElevenLabsAsk({ locale }: { locale: string }) {
   return (
     <section className="py-14" style={{ background: "#A78BFA", color: "#0a0a0a" }}>
       <div className="wrap grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 md:gap-9 items-center">
@@ -33,7 +33,7 @@ export default function ElevenLabsAsk() {
           </h2>
         </div>
         <a
-          href="#sign"
+          href={`/${locale}/p/elevenlabs/letter/`}
           className="btn btn-lg whitespace-nowrap"
           style={{ background: "#0a0a0a", color: "#fff" }}
         >

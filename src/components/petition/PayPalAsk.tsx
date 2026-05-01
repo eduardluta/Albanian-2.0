@@ -1,4 +1,4 @@
-export default function PayPalAsk() {
+export default function PayPalAsk({ locale }: { locale: string }) {
   return (
     <section className="py-14" style={{ background: "#1F6CFF", color: "#fff" }}>
       <div className="wrap grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 md:gap-9 items-center">
@@ -33,7 +33,7 @@ export default function PayPalAsk() {
           </h2>
         </div>
         <a
-          href="#sign"
+          href={`/${locale}/p/paypal/letter/`}
           className="btn btn-lg whitespace-nowrap"
           style={{ background: "#0a0a0a", color: "#fff" }}
         >

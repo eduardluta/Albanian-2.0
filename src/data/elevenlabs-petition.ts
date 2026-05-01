@@ -128,13 +128,50 @@ const SIGNERS = [
   { name: "Adrian Spahija", city: "Milan", time: "32 min" },
 ];
 
+export const ELEVENLABS_LETTER = {
+  sentDate: "2026-04-22",
+  sentDateDisplay: "April 22, 2026",
+  to: {
+    name: "Mati Staniszewski",
+    role: "Co-founder & CEO, ElevenLabs",
+    company: "ElevenLabs",
+    address: ["33 Charlotte Street", "London W1T 1RR", "United Kingdom"],
+  },
+  subject: "Add an Albanian voice to the ElevenLabs library by Q3 2026",
+  salutation: "Dear Mr. Staniszewski,",
+  body: [
+    "We are writing as 14,228 people who are asking for the voice we don't have. ElevenLabs supports 32 languages today, including every Balkan language except ours: Slovenian (2.5M speakers), Croatian (5.6M), Serbian (9.0M), Macedonian (2.0M), Bulgarian (8.0M).",
+    "Albanian — 7.5 million speakers across Kosovo, Albania, North Macedonia, and the diaspora — has zero voices, zero TTS, zero dubbing, and zero cloning support.",
+    "This is not a science gap. Your model architecture handles Vietnamese tones. Albanian phonotactics, including the standard Tosk and Gheg pronunciations, are not exotic. Open Subtitles, Common Voice, and the public archives of RTK and RTSH provide ready training corpora; university linguistics departments in Pristina, Tirana, and Skopje can supply curated, rights-cleared data.",
+  ],
+  asks: [
+    "Albanian (Standard) and Albanian (Gheg) added to Eleven v3.",
+    "Both standards available for Dubbing and Voice Cloning.",
+    "A public roadmap entry confirming Albanian is on the next-cohort training plan.",
+  ],
+  closing: [
+    "Signatures are being collected at change.org/p/elevenlabs-add-an-albanian-voice. We expect to deliver 100,000.",
+    "We are happy to provide whatever the team needs — speakers, datasets, evaluation partners, or community feedback — to move this forward.",
+  ],
+  replyByDisplay: "We would welcome a reply by June 1, 2026.",
+  signOff: "Sincerely,",
+  signedBy: {
+    name: "Driton Bajraktari",
+    role: "Founder & CEO, dua.com",
+    behalfOf: "On behalf of Digital Albanian 2.0",
+  },
+  replies: [],
+};
+
 export const ELEVENLABS_PETITION: Petition = {
   target: "ElevenLabs",
   num: "05",
+  slug: "elevenlabs",
   changeOrgUrl: ELEVENLABS_CHANGE_ORG_URL,
   signatures: ELEVENLABS_SIGNATURES,
   target_count: ELEVENLABS_TARGET,
   accent: "#A78BFA",
   signers: SIGNERS,
   faq: ELEVENLABS_FAQ,
+  letter: ELEVENLABS_LETTER,
 };

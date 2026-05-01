@@ -66,7 +66,7 @@ export default async function NetflixPetitionPage({
   return (
     <main>
       <PetitionHero />
-      <AskBand />
+      <AskBand locale={locale} />
       <SignBlock
         petition={NETFLIX_PETITION}
         scaleHook="One signature is anecdote. 1,000 is a tweet. 100,000 is a problem Netflix has to put on the localization roadmap. That's our target."

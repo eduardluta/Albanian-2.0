@@ -294,15 +294,53 @@ export const SOCIAL_ROWS: SocialRow[] = [
   },
 ];
 
+/* ---- Open letter to Netflix ---- */
+
+export const NETFLIX_LETTER = {
+  sentDate: "2026-04-12",
+  sentDateDisplay: "April 12, 2026",
+  to: {
+    name: "Greg Peters",
+    role: "Co-CEO, Netflix Inc.",
+    company: "Netflix Inc.",
+    address: ["1 Albright Way", "Los Gatos, CA 95032", "United States"],
+  },
+  subject: "Add Albanian to Netflix's language menu by Q4 2026",
+  salutation: "Dear Mr. Peters,",
+  body: [
+    "We are writing as 38,420 people who pay for Netflix and speak Albanian. Across Kosovo, Albania, North Macedonia, Montenegro, and the diaspora — 16 million of us — every month we sign in to a service that does not speak to us in our language.",
+    "Netflix supports 33 subtitle languages today. Slovenian (2.5M speakers), Greek (13.5M), Croatian (5.6M) all received the full library. Albanian — the sixth-most-spoken language in the European Union — has zero subtitles and zero UI translation.",
+  ],
+  asks: [
+    "Albanian subtitles across the Netflix library, prioritising Original content.",
+    "Albanian dubbing for the top-100 family titles.",
+    "Albanian as a selectable UI language.",
+  ],
+  closing: [
+    "This is not a feasibility question. Your localization team has shipped Slovenian, Croatian, and Macedonian. The pipeline exists. The market case is one we are happy to walk through with your localisation operations team — there are 16 million of us, and we are paying customers.",
+    "We have asked our community to sign at change.org/p/netflix-add-albanian-language-support. We crossed 38,000 signatures in the first week. Every response, partial or full, will be published on this page.",
+  ],
+  replyByDisplay: "We would welcome a reply by May 30, 2026.",
+  signOff: "Sincerely,",
+  signedBy: {
+    name: "Driton Bajraktari",
+    role: "Founder & CEO, dua.com",
+    behalfOf: "On behalf of Digital Albanian 2.0",
+  },
+  replies: [],
+};
+
 /* ---- Petition object for shared components ---- */
 
 export const NETFLIX_PETITION: Petition = {
   target: "Netflix",
   num: "01",
+  slug: "netflix",
   changeOrgUrl: NETFLIX_CHANGE_ORG_URL,
   signatures: NETFLIX_SIGNATURES,
   target_count: NETFLIX_TARGET,
   accent: "#E50914",
   signers: NETFLIX_SIGNERS,
   faq: NETFLIX_FAQ,
+  letter: NETFLIX_LETTER,
 };
