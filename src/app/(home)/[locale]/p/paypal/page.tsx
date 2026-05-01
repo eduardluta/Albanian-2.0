@@ -3,20 +3,19 @@ import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { siteUrl, siteName } from "@/lib/site";
 
-import PetitionHero from "@/components/petition/PetitionHero";
-import AskBand from "@/components/petition/AskBand";
+import PayPalHero from "@/components/petition/PayPalHero";
+import PayPalAsk from "@/components/petition/PayPalAsk";
+import PayPalCosts from "@/components/petition/PayPalCosts";
+import PayPalReceipts from "@/components/petition/PayPalReceipts";
 import SignBlock from "@/components/petition/SignBlock";
-import Receipts from "@/components/petition/Receipts";
-import Voices from "@/components/petition/Voices";
-import SocialWall from "@/components/petition/SocialWall";
 import Faq from "@/components/petition/Faq";
 import PetitionCta from "@/components/petition/PetitionCta";
-import { NETFLIX_PETITION, NETFLIX_FAQ } from "@/data/netflix-petition";
+import { PAYPAL_PETITION } from "@/data/paypal-petition";
 
-const PETITION_TITLE = "Add Albanian to Netflix";
+const PETITION_TITLE = "Bring PayPal to Kosovo";
 const META_TITLE = `${PETITION_TITLE} · Digital Albanian 2.0`;
 const META_DESC =
-  "Netflix supports 33 languages. Albanian — spoken by 16 million people — is not one of them. Sign the open letter to add Albanian subtitles, dubs and UI by Q4 2026.";
+  "PayPal serves 200+ countries — every neighbour of Kosovo, no exceptions. 1.8 million Kosovars and zero Kosovo-registered businesses can open an account. Sign the open letter to add Kosovo by Q1 2027.";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -29,11 +28,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const url = `${siteUrl}/${locale}/p/netflix/`;
+  const url = `${siteUrl}/${locale}/p/paypal/`;
   const languages = Object.fromEntries(
-    locales.map((l) => [l, `${siteUrl}/${l}/p/netflix/`]),
+    locales.map((l) => [l, `${siteUrl}/${l}/p/paypal/`]),
   );
-  languages["x-default"] = `${siteUrl}/p/netflix/`;
+  languages["x-default"] = `${siteUrl}/p/paypal/`;
   return {
     title: META_TITLE,
     description: META_DESC,
@@ -55,7 +54,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function NetflixPetitionPage({
+export default async function PayPalPetitionPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -65,20 +64,21 @@ export default async function NetflixPetitionPage({
 
   return (
     <main>
-      <PetitionHero />
-      <AskBand />
+      <PayPalHero />
+      <PayPalAsk />
+      <PayPalCosts />
+      <PayPalReceipts />
       <SignBlock
-        petition={NETFLIX_PETITION}
-        scaleHook="One signature is anecdote. 1,000 is a tweet. 100,000 is a problem Netflix has to put on the localization roadmap. That's our target."
+        petition={PAYPAL_PETITION}
+        num="05"
+        scaleHook="One signature is a complaint email. 1,000 is a Reddit thread. 100,000 is a market-entry case PayPal can no longer ignore."
       />
-      <Receipts />
-      <Voices />
-      <SocialWall />
-      <Faq items={NETFLIX_FAQ} />
+      <Faq items={PAYPAL_PETITION.faq} num="06" />
       <PetitionCta
-        signatures={NETFLIX_PETITION.signatures}
-        target={NETFLIX_PETITION.target_count}
-        changeOrgUrl={NETFLIX_PETITION.changeOrgUrl}
+        signatures={PAYPAL_PETITION.signatures}
+        target={PAYPAL_PETITION.target_count}
+        changeOrgUrl={PAYPAL_PETITION.changeOrgUrl}
+        background="#1F6CFF"
       />
     </main>
   );

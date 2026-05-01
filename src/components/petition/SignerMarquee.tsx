@@ -1,4 +1,4 @@
-import { NETFLIX_SIGNERS, NETFLIX_SIGNATURES } from "@/data/netflix-petition";
+import type { Signer } from "@/data/petition-shared";
 
 function initials(name: string) {
   return name
@@ -8,9 +8,15 @@ function initials(name: string) {
     .join("");
 }
 
-export default function SignerMarquee() {
+export default function SignerMarquee({
+  signers,
+  total,
+}: {
+  signers: readonly Signer[];
+  total: number;
+}) {
   // Duplicate the row in markup so the CSS marquee loops seamlessly.
-  const list = [...NETFLIX_SIGNERS, ...NETFLIX_SIGNERS];
+  const list = [...signers, ...signers];
   return (
     <div className="mt-16 pt-9 border-t border-rule">
       <div className="flex justify-between items-center mb-4 flex-wrap gap-3">
@@ -23,7 +29,7 @@ export default function SignerMarquee() {
           Live · latest signatures from change.org
         </div>
         <div className="text-[11px] tracking-[0.06em] text-grey-6">
-          {NETFLIX_SIGNATURES.toLocaleString("en-US")} names · 178 countries
+          {total.toLocaleString("en-US")} names · 178 countries
         </div>
       </div>
       <div className="petition-marquee-track relative overflow-hidden">

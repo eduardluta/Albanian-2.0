@@ -1,15 +1,19 @@
-import {
-  NETFLIX_CHANGE_ORG_URL,
-  NETFLIX_SIGNATURES,
-  NETFLIX_TARGET,
-} from "@/data/netflix-petition";
-
-export default function PetitionCta() {
-  const togo = (NETFLIX_TARGET - NETFLIX_SIGNATURES).toLocaleString("en-US");
+export default function PetitionCta({
+  signatures,
+  target,
+  changeOrgUrl,
+  background = "#E11D2A",
+}: {
+  signatures: number;
+  target: number;
+  changeOrgUrl: string;
+  background?: string;
+}) {
+  const togo = (target - signatures).toLocaleString("en-US");
   return (
     <section
       className="py-24 md:py-28 text-center"
-      style={{ background: "#E11D2A", color: "#fff" }}
+      style={{ background, color: "#fff" }}
     >
       <div className="wrap">
         <div className="text-[11px] tracking-[0.2em] uppercase font-bold mb-8 opacity-75">
@@ -29,7 +33,7 @@ export default function PetitionCta() {
           </em>
         </h2>
         <a
-          href={NETFLIX_CHANGE_ORG_URL}
+          href={changeOrgUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-lg"

@@ -1,9 +1,14 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { NETFLIX_CHANGE_ORG_URL, NETFLIX_SIGNATURES } from "@/data/netflix-petition";
 
-export default function PetitionForm() {
+export default function PetitionForm({
+  changeOrgUrl,
+  signatures,
+}: {
+  changeOrgUrl: string;
+  signatures: number;
+}) {
   const [submitting, setSubmitting] = useState(false);
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -12,7 +17,7 @@ export default function PetitionForm() {
     // signature collection (per the brief). Pre-filling fields server-side
     // would require their API; we redirect instead.
     setTimeout(() => {
-      window.open(NETFLIX_CHANGE_ORG_URL, "_blank", "noopener");
+      window.open(changeOrgUrl, "_blank", "noopener");
       setSubmitting(false);
     }, 350);
   };
@@ -29,7 +34,7 @@ export default function PetitionForm() {
       <div className="flex flex-col items-center gap-1.5 text-center pb-4.5">
         <div className="flex items-center gap-2.5">
           <span className="text-[34px] font-extrabold text-[#111827] tracking-[-0.01em]">
-            {NETFLIX_SIGNATURES.toLocaleString("en-US")}
+            {signatures.toLocaleString("en-US")}
           </span>
           <svg
             viewBox="0 0 24 24"

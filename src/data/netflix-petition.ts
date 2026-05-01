@@ -3,6 +3,8 @@
  * Source: design handoff "Digital Albanian 2.0-handoff (1)" / variation-b.jsx
  */
 
+import type { Petition } from "./petition-shared";
+
 export const NETFLIX_CHANGE_ORG_URL =
   "https://www.change.org/p/netflix-add-albanian-language-support";
 
@@ -33,9 +35,7 @@ export const POSTER_AUDIO_TAGS = [
   "EN", "ES", "FR", "DE", "IT", "PT", "PL", "TR", "AR", "HI", "JA", "KO", "NL", "SV",
 ];
 
-export type Signer = { name: string; city: string; time: string };
-
-export const NETFLIX_SIGNERS: Signer[] = [
+export const NETFLIX_SIGNERS = [
   { name: "Albulena Hoxha", city: "Pristina", time: "3 min" },
   { name: "Driton Berisha", city: "Tirana", time: "5 min" },
   { name: "Erza Krasniqi", city: "Skopje", time: "7 min" },
@@ -97,9 +97,9 @@ export const VOICES: Voice[] = [
   },
 ];
 
-export type FaqItem = { q: string; a: string };
+export type { FaqItem, Signer } from "./petition-shared";
 
-export const FAQ_ITEMS: FaqItem[] = [
+export const NETFLIX_FAQ = [
   {
     q: "Why not just use English subtitles?",
     a: "Because half my family doesn't read English. Because Albanian is the 6th-most-spoken language in the EU. Because we pay full price and deserve full service.",
@@ -293,3 +293,16 @@ export const SOCIAL_ROWS: SocialRow[] = [
     ],
   },
 ];
+
+/* ---- Petition object for shared components ---- */
+
+export const NETFLIX_PETITION: Petition = {
+  target: "Netflix",
+  num: "01",
+  changeOrgUrl: NETFLIX_CHANGE_ORG_URL,
+  signatures: NETFLIX_SIGNATURES,
+  target_count: NETFLIX_TARGET,
+  accent: "#E50914",
+  signers: NETFLIX_SIGNERS,
+  faq: NETFLIX_FAQ,
+};

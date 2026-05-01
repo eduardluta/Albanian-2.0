@@ -3,20 +3,19 @@ import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { siteUrl, siteName } from "@/lib/site";
 
-import PetitionHero from "@/components/petition/PetitionHero";
-import AskBand from "@/components/petition/AskBand";
+import ElevenLabsHero from "@/components/petition/ElevenLabsHero";
+import ElevenLabsAsk from "@/components/petition/ElevenLabsAsk";
+import ElevenLabsReceipts from "@/components/petition/ElevenLabsReceipts";
+import ElevenLabsVoices from "@/components/petition/ElevenLabsVoices";
 import SignBlock from "@/components/petition/SignBlock";
-import Receipts from "@/components/petition/Receipts";
-import Voices from "@/components/petition/Voices";
-import SocialWall from "@/components/petition/SocialWall";
 import Faq from "@/components/petition/Faq";
 import PetitionCta from "@/components/petition/PetitionCta";
-import { NETFLIX_PETITION, NETFLIX_FAQ } from "@/data/netflix-petition";
+import { ELEVENLABS_PETITION } from "@/data/elevenlabs-petition";
 
-const PETITION_TITLE = "Add Albanian to Netflix";
+const PETITION_TITLE = "An Albanian Voice on ElevenLabs";
 const META_TITLE = `${PETITION_TITLE} · Digital Albanian 2.0`;
 const META_DESC =
-  "Netflix supports 33 languages. Albanian — spoken by 16 million people — is not one of them. Sign the open letter to add Albanian subtitles, dubs and UI by Q4 2026.";
+  "ElevenLabs supports 32 languages — every Balkan one except ours. Albanian has 7.5M speakers and zero TTS, dubbing, or voice cloning. Sign the open letter to add Albanian by Q3 2026.";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -29,11 +28,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const url = `${siteUrl}/${locale}/p/netflix/`;
+  const url = `${siteUrl}/${locale}/p/elevenlabs/`;
   const languages = Object.fromEntries(
-    locales.map((l) => [l, `${siteUrl}/${l}/p/netflix/`]),
+    locales.map((l) => [l, `${siteUrl}/${l}/p/elevenlabs/`]),
   );
-  languages["x-default"] = `${siteUrl}/p/netflix/`;
+  languages["x-default"] = `${siteUrl}/p/elevenlabs/`;
   return {
     title: META_TITLE,
     description: META_DESC,
@@ -55,7 +54,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function NetflixPetitionPage({
+export default async function ElevenLabsPetitionPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -65,20 +64,21 @@ export default async function NetflixPetitionPage({
 
   return (
     <main>
-      <PetitionHero />
-      <AskBand />
+      <ElevenLabsHero />
+      <ElevenLabsAsk />
       <SignBlock
-        petition={NETFLIX_PETITION}
-        scaleHook="One signature is anecdote. 1,000 is a tweet. 100,000 is a problem Netflix has to put on the localization roadmap. That's our target."
+        petition={ELEVENLABS_PETITION}
+        num="03"
+        scaleHook="A signature isn't a feature request. 100,000 signatures is a roadmap line item."
       />
-      <Receipts />
-      <Voices />
-      <SocialWall />
-      <Faq items={NETFLIX_FAQ} />
+      <ElevenLabsReceipts />
+      <ElevenLabsVoices />
+      <Faq items={ELEVENLABS_PETITION.faq} num="06" />
       <PetitionCta
-        signatures={NETFLIX_PETITION.signatures}
-        target={NETFLIX_PETITION.target_count}
-        changeOrgUrl={NETFLIX_PETITION.changeOrgUrl}
+        signatures={ELEVENLABS_PETITION.signatures}
+        target={ELEVENLABS_PETITION.target_count}
+        changeOrgUrl={ELEVENLABS_PETITION.changeOrgUrl}
+        background="#A78BFA"
       />
     </main>
   );

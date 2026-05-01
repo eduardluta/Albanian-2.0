@@ -53,6 +53,7 @@ export const petitions: Petition[] = [
     signaturesGoal: 50000,
     daysRunning: 21,
     progress: 73.8,
+    page: "p/paypal",
     href: "#paypal",
   },
   {
@@ -77,6 +78,7 @@ export const petitions: Petition[] = [
     signaturesGoal: 50000,
     daysRunning: 6,
     progress: 28.4,
+    page: "p/elevenlabs",
     href: "#elevenlabs",
   },
   {
