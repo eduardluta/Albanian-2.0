@@ -41,6 +41,7 @@ export const petitions: Petition[] = [
     signaturesGoal: 50000,
     daysRunning: 14,
     progress: 56.3,
+    page: "p/spotify",
     href: "#spotify",
   },
   {
@@ -66,6 +67,7 @@ export const petitions: Petition[] = [
     signaturesGoal: 50000,
     daysRunning: 9,
     progress: 38.9,
+    page: "p/apple",
     href: "#apple",
   },
   {
@@ -99,10 +101,11 @@ export const petitions: Petition[] = [
     target: "Uber",
     status: "active",
     filters: ["recognize"],
-    signatures: 9884,
-    signaturesGoal: 50000,
+    signatures: 22710,
+    signaturesGoal: 100000,
     daysRunning: 8,
-    progress: 19.7,
+    progress: 22.7,
+    page: "p/uber",
     href: "#uber",
   },
   {
